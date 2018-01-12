@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="94b-jH-d8g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--GLKit View Controller-->
+        <scene sceneID="nBQ-zt-7QO">
+            <objects>
+                <glkViewController preferredFramesPerSecond="30" id="94b-jH-d8g" customClass="ViewController" customModule="ObjModelLoader" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="vMb-od-cEg"/>
+                        <viewControllerLayoutGuide type="bottom" id="cxv-ZR-TWZ"/>
+                    </layoutGuides>
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="Qho-Zx-Wfc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1C-96-9DN">
+                                <rect key="frame" x="168" y="594" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <state key="highlighted">
+                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="Reset:" destination="94b-jH-d8g" eventType="touchUpInside" id="AYL-4h-z4v"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Chp-cv-Cdd">
+                                <rect key="frame" x="310" y="28" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="light:" destination="94b-jH-d8g" eventType="valueChanged" id="aYT-v4-WeY"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outlet property="delegate" destination="94b-jH-d8g" id="Usp-oj-wQg"/>
+                            <outletCollection property="gestureRecognizers" destination="KYc-87-vvn" appends="YES" id="bpT-Of-OnT"/>
+                            <outletCollection property="gestureRecognizers" destination="idX-6y-3HS" appends="YES" id="VN5-kP-d1z"/>
+                            <outletCollection property="gestureRecognizers" destination="E40-bh-YzK" appends="YES" id="ghj-yB-nyx"/>
+                        </connections>
+                    </glkView>
+                    <connections>
+                        <outlet property="ImageView" destination="Qho-Zx-Wfc" id="8Fe-C7-b8k"/>
+                    </connections>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qWW-lw-a5a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" maximumNumberOfTouches="2" id="KYc-87-vvn">
+                    <connections>
+                        <action selector="pan:" destination="94b-jH-d8g" id="icT-y4-MdK"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer id="idX-6y-3HS">
+                    <connections>
+                        <action selector="pinch:" destination="94b-jH-d8g" id="yDD-fu-WpJ"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <rotationGestureRecognizer id="E40-bh-YzK">
+                    <connections>
+                        <action selector="rotation:" destination="94b-jH-d8g" id="cz7-tw-D34"/>
+                    </connections>
+                </rotationGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-351" y="344"/>
+        </scene>
+    </scenes>
+</document>

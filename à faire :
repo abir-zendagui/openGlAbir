@@ -1,0 +1,31 @@
+à faire : 
+chargé un bon model .obj avec V, vn,vt,f 
+dans mtl chargé la bonne photo de texture
+
+
+FAIRE Un sol avec texture
+j'ai suivi https://www.raywenderlich.com/50398/opengl-es-transformations-gestures pour implimenté les gesture donc la class tranformation
+les gesture !!
+
+dans model on définit le modelview matrice
+
+pour le fichier .obj :
+# List of vertices (v) with XYZ coordinates.
+v  1.0x   1.0y   1.0z
+v  ...X   ...Y   ...Z
+
+# List of texture coordinates (vt) with UV coordinates.
+vt 0.5u   0.5v
+vt ...U   ...V
+
+# List of normals (vn) with XYZ coordinates.
+vn 0.0x   1.0y   0.0z
+vn ...X   ...Y   ...Z
+
+# List of faces (f) with v, vt, and vn data (three points ABC per face).
+f  1v/1vt/1vn   2v/2vt/1vn   3v/3vt/1vn
+f  v/vt/vnA     v/vt/vnB     v/vt/vnC
+
+
+// pour la lecture du fichier .obj
+https://www.raywenderlich.com/48293/how-to-export-blender-models-to-opengl-es-part-1
